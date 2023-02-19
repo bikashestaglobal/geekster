@@ -1,4 +1,4 @@
-package com.geekster.valiation.models;
+package com.geekster.valiation.model;
 
 
 import jakarta.persistence.*;
@@ -13,7 +13,7 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(staticName = "build")
 @Entity
 @Table(name = "user_tbl")
 public class User {
@@ -48,4 +48,5 @@ public class User {
     @UpdateTimestamp
     @Column(name = "updated_at")
     private Date updatedAt;
+
 }

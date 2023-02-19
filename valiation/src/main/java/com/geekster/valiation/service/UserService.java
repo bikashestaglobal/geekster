@@ -1,10 +1,12 @@
-package com.geekster.valiation.services;
+package com.geekster.valiation.service;
 
-import com.geekster.valiation.daos.UserRepository;
-import com.geekster.valiation.models.User;
+import com.geekster.valiation.dao.UserRepository;
+import com.geekster.valiation.model.User;
+import com.geekster.valiation.dto.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -18,8 +20,13 @@ public class UserService {
     }
 
     // createUser
-    public int createUser(User reqBody) {
-        User response = userRepository.save(reqBody);
+    public int createUser(UserRequest reqBody) {
+        User newUser = User.build(0,reqBody.getUserName(),
+                reqBody.getEmail(), reqBody.getDateOfBirth(),
+                reqBody.getNumber(),
+                reqBody.getDate(), reqBody.getTime(),null,null);
+
+        User response = userRepository.save(newUser);
         return  response.getUserId();
     }
 

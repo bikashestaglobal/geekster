@@ -1,7 +1,9 @@
-package com.geekster.valiation.controllers;
+package com.geekster.valiation.controller;
 
-import com.geekster.valiation.models.User;
-import com.geekster.valiation.services.UserService;
+import com.geekster.valiation.model.User;
+import com.geekster.valiation.service.UserService;
+import com.geekster.valiation.dto.UserRequest;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +32,8 @@ public class UserController {
 
     // addUser
     @PostMapping("/addUser")
-    public ResponseEntity<String> createUser(@RequestBody User reqBody){
+    public ResponseEntity<String> createUser(@Valid @RequestBody UserRequest reqBody){
+
         int userId = userService.createUser(reqBody);
         return new ResponseEntity<>("User created with id: "+userId, HttpStatus.CREATED);
     }

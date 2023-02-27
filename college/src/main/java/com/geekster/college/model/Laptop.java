@@ -19,7 +19,7 @@ public class Laptop {
     private String brand;
     private Integer price;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id")
     private Student student;
 

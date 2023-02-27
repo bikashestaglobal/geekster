@@ -21,7 +21,7 @@ public class Book {
     private String description;
     private Integer price;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id")
     private Student student;
 }

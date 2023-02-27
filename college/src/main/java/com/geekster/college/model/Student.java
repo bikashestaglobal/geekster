@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -23,9 +24,9 @@ public class Student {
     private String branch;
     private String department;
 
-    @ManyToMany(mappedBy = "studentList")
+    @ManyToMany(mappedBy = "studentList", fetch = FetchType.EAGER)
     @JsonBackReference
-    private List<Course> courseList;
+    private List<Course> courseList = new ArrayList<>();
     @Embedded
     private Address address;
 }

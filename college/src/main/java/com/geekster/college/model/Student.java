@@ -25,7 +25,7 @@ public class Student {
     private String department;
 
     @ManyToMany(mappedBy = "studentList", fetch = FetchType.EAGER)
-    @JsonBackReference
+//    @JsonBackReference
     private List<Course> courseList = new ArrayList<>();
     @Embedded
     private Address address;

@@ -27,6 +27,6 @@ public class Course {
             name = "student_courses",
             joinColumns = @JoinColumn(name = "course_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
-    @JsonManagedReference
+    @JsonIgnore
     List<Student> studentList = new ArrayList<>();;
 }

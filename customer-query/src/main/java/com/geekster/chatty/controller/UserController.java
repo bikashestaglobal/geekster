@@ -78,7 +78,7 @@ public class UserController {
         return new ResponseEntity<>(resObj, HttpStatus.OK);
     }
 
-    
+
 
     // getUserByAge
     @GetMapping("/age/{age}")

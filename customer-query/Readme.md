@@ -93,3 +93,6 @@ curl --location --request GET 'localhost:8080/api/v1/users/active/false' \
 "age": 24,
 "active": true
 }'
+
+### Explanation Video
+[![](https://markdown-videos.deta.dev/youtube/wFcMlWyHu_A)](https://youtu.be/wFcMlWyHu_A)

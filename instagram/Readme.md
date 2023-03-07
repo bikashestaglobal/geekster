@@ -9,3 +9,7 @@ controller => services => Repository
 
 ## Data Structured
 To making this project I used ArrayList, JSONObject, JSONArray and HashMap Data structure.
+
+## Video Explanation
+[![](https://markdown-videos.deta.dev/youtube/2-8bvLOFhCU)](https://youtu.be/2-8bvLOFhCU)
+

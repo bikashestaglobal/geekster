@@ -13,5 +13,8 @@ To making this project I used ArrayList, and HashMap Data structure.
 ## Project Summery
 This is basically the web api project to manage the recipe data.
 
+## Linkedin Post
+https://www.linkedin.com/posts/bikash-kumar-singh_swagger-ui-activity-7041798218346565632-9mde/?utm_source=share&utm_medium=member_desktop
+
 ## Explanation Video
-[![](https://markdown-videos.deta.dev/youtube/lAWnIP1S6UAA)](https://youtu.be/lAWnIP1S6UAA)
+[![](https://markdown-videos.deta.dev/youtube/AZkNyX2AA5U)](https://youtu.be/AZkNyX2AA5U)
